@@ -14,31 +14,14 @@
 </head>
 <body>
   <?php include ('header.html'); ?>
-
-  <!--Global Navigation-->
-  <!-- <nav>
-      <ul id="menu">
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="company.html">COMPANY</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-  </nav> -->
-  <!--Global Navigation-->
+  <!-- <?php include ('nav.html'); ?> -->
 
   <article>
       <h2>Contents</h2>
       <p>Txt Txt Txt Txt Txt</p>
   </article>
-  <!-- <aside>
-      <ul id="side-menu">
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="company.html">COMPANY</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-  </aside> -->
 
+  <!-- <?php include ('aside.html'); ?>  -->
   <?php include ('footer.html');?>
   </body>
   </html>
