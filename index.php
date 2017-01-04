@@ -13,16 +13,32 @@
   <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-  Hello World!
-  <?php echo "Hello World!!"; ?>
-  <!-- <ol>
-    <li><a href="form_get1.php" target="_blank">HTML繝輔か繝ｼ繝??ｼ哦ET(隨ｬ?ｼ大屓)</a></li>
-    <li><a href="form_post1.php" target="_blank">HTML繝輔か繝ｼ繝??ｼ啀OST(隨ｬ?ｼ大屓)</a></li>
-    <li><a href="camera.php" target="_blank">繧ｫ繝｡繝ｩ驕ｸ謚?</a>(隨ｬ?ｼ大屓)</li>
-    <li><a href="audio.php" target="_blank">髻ｳ螢ｰ驕ｸ謚?</a>(隨ｬ?ｼ大屓)</li>
-    <li><a href="geolocation.html" target="_blank">迴ｾ蝨ｨ蝨ｰ諠?蝣ｱ?ｼ夂ｷｯ蠎ｦ繝ｻ邨悟ｺｦ蜿門ｾ?</a>(隨ｬ?ｼ大屓)</li>
-    <li><a href="image.php" target="_blank">繧ｫ繝｡繝ｩ/逕ｻ蜒城∈謚?(隨ｬ?ｼ貞屓)</a></li>
-    <li><a href="fileupload1.php" target="_blank">繝励Ο繝医ち繧､繝怜ｮ梧??(隨ｬ?ｼ貞屓)</a></li>
-  </ol> -->
-</body>
-</html>
+  <?php include ('header.html'); ?>
+
+  <!--グローバルナビゲーション部分-->
+  <!-- <nav>
+      <ul id="menu">
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="company.html">COMPANY</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+  </nav> -->
+  <!--グローバルナビゲーション部分-->
+
+  <article>
+      <h2>コンテンツ部分</h2>
+      <p>テキスト・テキスト・テキスト・テキスト・テキスト</p>
+  </article>
+  <!-- <aside>
+      <ul id="side-menu">
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="company.html">COMPANY</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+  </aside> -->
+
+  <?php include ('footer.html');?>
+  </body>
+  </html>
