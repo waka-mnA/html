@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <title>PhotoShare.com</title>
   <!-- Bootstrap CSS Reading -->
-  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- jQuery Reading -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Bootstrap JS Reading -->
