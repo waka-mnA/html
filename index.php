@@ -15,15 +15,15 @@
   <link rel="stylesheet" media="screen" href="/xxx/public/stylesheets/bootstrap-custom.css">
 </head>
 <body>
-  <?php include ('header.html'); ?>
-  <!-- <?php include ('nav.html'); ?> -->
+  <?php include ($_SERVER['DOCUMENT_ROOT']. 'header.html'); ?>
+  <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. 'nav.html'); ?> -->
 
   <article>
       <h2>Contents</h2>
       <p>Txt Txt Txt Txt Txt</p>
   </article>
 
-  <!-- <?php include ('aside.html'); ?>  -->
-  <?php include ('footer.html');?>
+  <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. 'aside.html'); ?>  -->
+  <?php include ($_SERVER['DOCUMENT_ROOT']. 'footer.html');?>
   </body>
   </html>
