@@ -11,8 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Bootstrap JS Reading -->
   <script src="js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" media="screen" href="/xxx/public/stylesheets/bootstrap-custom.css">
+  <link rel="stylesheet" media="screen" href="/css/bootstrap-custom.css">
 </head>
 <body>
   <?php include ($_SERVER['DOCUMENT_ROOT']. '/header.html'); ?>
