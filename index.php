@@ -15,7 +15,7 @@
 <body>
   <?php include ('header.html'); ?>
 
-  <!--グローバルナビゲーション部分-->
+  <!--Global Navigation-->
   <!-- <nav>
       <ul id="menu">
           <li><a href="index.html">TOP</a></li>
@@ -24,11 +24,11 @@
           <li><a href="contact.html">CONTACT</a></li>
       </ul>
   </nav> -->
-  <!--グローバルナビゲーション部分-->
+  <!--Global Navigation-->
 
   <article>
-      <h2>コンテンツ部分</h2>
-      <p>テキスト・テキスト・テキスト・テキスト・テキスト</p>
+      <h2>Contents</h2>
+      <p>Txt Txt Txt Txt Txt</p>
   </article>
   <!-- <aside>
       <ul id="side-menu">
