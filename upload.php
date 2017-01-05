@@ -12,11 +12,11 @@ $bucket = "comsm0010-wk13290";
 $key = "sakura.jpg";
 
 
-$client = S3Client::factory(array(
-  "key" => "AKIAJNH4SBIA7MP6SB2Q",
-  "secret" => "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",
-  "region" => Region::EU-WEST-2
-));
+// $client = S3Client::factory(array(
+//   "key" => "AKIAJNH4SBIA7MP6SB2Q",
+//   "secret" => "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",
+//   "region" => Region::EU-WEST-2
+// ));
 
 // $tmpfile = $_FILES["upfile"]["tmp_name"];
 //
