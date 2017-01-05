@@ -20,11 +20,11 @@ $sdk = new Aws\Sdk([
 $client = $sdk->createS3();
 
 //Get file name
-//$filepath = $_FILES["upfile"]["tmp_name"];
-$filepath = 'sakura.jpg';
-// if (!is_uploaded_file($filepath)) {
-//   die('File is not uploaded');
-// }
+$filepath = $_FILES["upfile"]["tmp_name"];
+
+if (!is_uploaded_file($filepath)) {
+  die('File is not uploaded');
+}
 
 try {
   echo "TEST1";
