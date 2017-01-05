@@ -63,7 +63,7 @@ if(!isset($_POST['login'])) {
     <input type="text" name="formUserid" id="userid"/>
     <br />
     <label for="password">Password</label>:
-    <input type="text" name="formPassword" id="password"/>
+    <input type="password" name="formPassword" id="password"/>
     <br />
     <input type="submit" name="login" value="Login" />
   </form>

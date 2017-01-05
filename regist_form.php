@@ -48,7 +48,7 @@ if($errorFlag) {  // pre_userid is invalid
     </tr>
     <tr>
       <td class="item">Password:</td>
-      <td><input type="text" size="30" name="input_password" value="<?php print $input_password; ?>">&nbsp;&nbsp;* Needs to be more than 5 letters and less than 17 letters.</td>
+      <td><input type="password" size="30" name="input_password" value="<?php print $input_password; ?>">&nbsp;&nbsp;* Needs to be more than 5 letters and less than 17 letters.</td>
     </tr>
     <tr>
       <td class="item">Name:</td>
