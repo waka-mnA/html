@@ -33,8 +33,10 @@ try {
       'Key' => $key,
       //'Body' => file_get_contents($filepath),
       //EntityBody::factory(fopen($filepath, 'r')),
-      'SourceFile'   => $filepath,
-      'ACL'          => 'public-read',
+      'Body'   => EntityBody::factory(fopen($fullfilename, 'r')),
+      'ACL'    => CannedAcl::PUBLIC_READ_WRITE,
+      //'SourceFile'   => $filepath,
+      //'ACL'          => 'public-read',
       //'ContentType' => mime_content_type($filepath)
   ]);
 
