@@ -38,12 +38,13 @@ caption {
   color: #000;
 }
 td {
-  min-width: 100px;
   padding: 8px 0px 8px 15px;
   border: none;
   font-size:1.8em;
 }
 td.item {
+
+  min-width: 100px;
   font-size:1.8em;
   padding-left:8px;
   background: none;
