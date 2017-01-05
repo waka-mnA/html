@@ -23,10 +23,10 @@ $client = $sdk->createS3();
 //Get file name
 $filepath = $_FILES["upfile"]["tmp_name"];
 $type = $_FILES['upfile']["type"];
-echo $type;
-if (!is_uploaded_file($filepath)) {
-  die('File is not uploaded');
-}
+$filepath="sakura1.jpg";
+// if (!is_uploaded_file($filepath)) {
+//   die('File is not uploaded');
+// }
 
 try {
   echo "TEST1";
