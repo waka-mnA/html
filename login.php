@@ -6,22 +6,24 @@ if(!isset($_POST['login'])) {
   //Display the login form
   inputForm();
 } else {
-  echo "TEST";
+
   $formUserId = $_POST['formUserid'];
   $formPassword = $_POST['formPassword'];
-
+  echo "TEST1";
   //ID, PASWORD are not entered yet
   if(($formUserId == "") || ($formPassword == "")) {
+      echo "TEST2";
     error(1);
   }
   else
   {
+      echo "TEST3";
     //ID,PASSWORD are entered
-    require_once('regist/db.php');
+    require_once('db.php');
     //get data from members table.
     $query = "select * from members";
     $result = mysqli_query($conn, $query);
-
+  echo "TEST4";
     //If USERIDs are matched, store password from database into variable.
     while($data = mysqli_fetch_array($result)) {
       if($data['userid'] == $formUserId) {
@@ -29,7 +31,7 @@ if(!isset($_POST['login'])) {
         break;
       }
     }
-
+  echo "TEST5";
     mysqli_close($conn);
 
     if(!isset($dbPassword)) {
