@@ -1,5 +1,5 @@
 <?php
-require_once("aws.phar");
+require_once("aws-autoloader.php");
 
 use Aws\S3\S3Client;
 use Aws\Common\Enum\Region;
