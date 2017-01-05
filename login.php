@@ -32,17 +32,17 @@ if(!isset($_POST['login'])) {
     if(!isset($dbPassword)) {
       error(2);
     }
-    // else {
-    //   if($dbPassword != $formPassword){
-    //     error(3);
-    //   } else {
-    //     //ID,password are matched.
-    //     //create session variable.
-    //     //register $formUserID into session variable.
-    //     $_SESSION['loginUser'] = $formUserId;
-    //     header("Location:main.php");
+     else {
+       if($dbPassword != $formPassword){
+         error(3);
+       } else {
+        //ID,password are matched.
+        //create session variable.
+        //register $formUserID into session variable.
+         $_SESSION['loginUser'] = $formUserId;
+         header("Location:main.php");
     //   }
-    // }
+    }
   }
 }
 ?>
