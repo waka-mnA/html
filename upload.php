@@ -13,8 +13,8 @@
 echo "TEST0";
 
   $client = S3Client::factory(array(
-    "key" => "AKIAJNH4SBIA7MP6SB2Q",
-    "secret" => "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",
+    "key" => "",
+    "secret" => "",
     "region" => Region::EU-WEST-2
   ));
 echo "TEST";
