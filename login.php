@@ -6,7 +6,7 @@ if(!isset($_POST['login'])) {
   //Display the login form
   inputForm();
 } else {
-echo "TEST";
+
   $formUserId = $_POST['formUserid'];
   $formPassword = $_POST['formPassword'];
   //ID, PASWORD are not entered yet
@@ -17,6 +17,7 @@ echo "TEST";
   {
     //ID,PASSWORD are entered
     require_once('db.php');
+    echo "TEST2";
     //get data from members table.
     $query = "select * from members";
     $result = mysqli_query($conn, $query);
@@ -27,7 +28,7 @@ echo "TEST";
         break;
       }
     }
-
+echo "TEST"3;
     mysqli_close($conn);
 
     if(!isset($dbPassword)) {
@@ -43,6 +44,7 @@ echo "TEST";
         header("Location:main.php");
       }
     }
+    echo "TEST4";
   }
 }
 ?>
