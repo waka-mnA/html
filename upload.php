@@ -1,10 +1,11 @@
 <?php
- // require("aws.phar");
-require("phar://".dirname(__FILE__)."aws.phar/aws-autoloader.php");
-// use Aws\S3\S3Client;
-// use Aws\Common\Enum\Region;
-// use Aws\S3\Exception\S3Exception;
-// use Guzzle\Http\EntityBody;
+echo "TEST1";
+  require("aws.phar");
+//require("phar://".dirname(__FILE__)."aws.phar/aws-autoloader.php");
+use Aws\S3\S3Client;
+use Aws\Common\Enum\Region;
+use Aws\S3\Exception\S3Exception;
+use Guzzle\Http\EntityBody;
 echo "TEST";
 // Bucket name
 $bucket = "comsm0010-wk13290";
