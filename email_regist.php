@@ -19,10 +19,11 @@ else{
 
   //Check it is registered successfully
   if($result == false) {
+        echo "TEST1";
     array_push($error, " Database Registration Failed.");
   }
   else {
-    echo "TEST;
+    echo "TEST";
     mb_language("english");
     mb_internal_encoding("utf-8");
     $to = $email;
