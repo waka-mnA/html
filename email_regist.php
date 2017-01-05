@@ -5,7 +5,6 @@ $email = $_POST["email"];
 $error = array();
 require_once("db.php");
 
-echo "TEST";
 /*Email Address Check*/
 if ($email == ""){
   array_push($error, "Please enter your e-mail address.");
@@ -15,7 +14,7 @@ else{
   $pre_user_id = uniqid(rand(100,999));
 
   //SQL
-  $query = "insert into members(pre_userid, email) values('$pre_user_id'. '$email')";
+  $query = "insert into members (pre_userid, email) values('$pre_user_id'. '$email')";
   $result = mysqli_query($query);
 
   //Check it is registered successfully
