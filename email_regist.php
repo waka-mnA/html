@@ -3,13 +3,9 @@
 $email = $_POST["email"];
 /*Error message*/
 $error = array();
-try{
-
-
-
-}
 require_once("db.php");
 
+echo "TEST";
 /*Email Address Check*/
 if ($email == ""){
   array_push($error, "Please enter your e-mail address.");
