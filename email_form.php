@@ -7,7 +7,7 @@
   </table>
   <br />
   <div>
-<input class="btn btn-default" type="submit" name="submit" value="Submit" />
+<input class="btn btn-default" type="submit" name="submit" value="Register" />
 <br />
 <br />
 If you are already our user,<br />
