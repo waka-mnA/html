@@ -3,8 +3,9 @@
 session_start();
 
 if(!isset($_POST['login'])) {
+  echo "TEST";
   inputForm();
-} else {}
+} else {
   $formUserId = $_POST['formUserid'];
   $formPassword = $_POST['formPassword'];
 
@@ -86,10 +87,8 @@ function error($errorType) {
     case 3:
     $errorMsg = "Wrong Password.";
     break;
-}
-
+  }
 ?>
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
