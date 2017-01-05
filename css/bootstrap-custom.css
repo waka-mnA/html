@@ -29,7 +29,7 @@ body {
 table {
   width: 600px;
   margin: 20px auto;
-  border: 1px solid #78849C;
+
 }
 
 caption {
@@ -46,7 +46,7 @@ td {
 td.item {
   font-size:1.8em;
   padding-left:8px;
-  background: #E7E9EF;
+  background: none;
   color: #22304C;
 }
 div {
