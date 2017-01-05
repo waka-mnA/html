@@ -64,12 +64,6 @@
 	<!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/nav.html'); ?> -->
 <article>
 	<h2> Hello <?php print $loginUser; ?>!</h2>
-
-
-
-
-
-
   <form method="post" enctype="multipart/form-data"  action="upload.php">
             <input type="file" name="upfile">
             <button class="btn btn-default" type="submit">Upload</button>
