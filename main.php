@@ -65,7 +65,7 @@
 <article>
 	<h2> Hello <?php print $loginUser; ?>!</h2>
   <form method="post" enctype="multipart/form-data"  action="upload.php">
-            <input type="file" name="upfile">
+            <input class="col-lg-2 control-label" type="file" name="upfile">
             <button class="btn btn-default" type="submit">Upload</button>
   </form>
 
