@@ -10,7 +10,7 @@
   // Bucket name
   $bucket = "comsm0010-wk13290";
   // Filename to be uploaded
-  $key = "test/sakura3.jpg";
+  $key = "test/sakura1.jpg";
 //echo "TEST0";
 
 $sdk = new Aws\Sdk([
@@ -22,21 +22,22 @@ $client = $sdk->createS3();
 
 //Get file name
 $filepath = $_FILES["upfile"]["tmp_name"];
-echo $filepath;
-// if (!is_uploaded_file($filepath)) {
-//   die('File is not uploaded');
-// }
+$type = $_FILES['file']["type"];
+
+if (!is_uploaded_file($filepath)) {
+  die('File is not uploaded');
+}
 
 try {
   echo "TEST1";
   $result = $client->putObject([
       'Bucket' => $bucket,
       'Key' => $key,
-      //'Body' => file_get_contents($filepath),
+      'Body' => file_get_contents($filepath),
       //EntityBody::factory(fopen($filepath, 'r')),
-      'SourceFile'   => $filepath,
+      //'SourceFile'   => $filepath,
       'ACL'          => 'public-read',
-      //'ContentType' => mime_content_type($filepath)
+      'ContentType' => $type
   ]);
 
     echo "Uploaded Successfully!";
