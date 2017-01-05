@@ -10,7 +10,7 @@
   // Bucket name
   $bucket = "comsm0010-wk13290";
   // Filename to be uploaded
-  $key = "sakura3.jpg";
+  $key = "/test/sakura3.jpg";
 //echo "TEST0";
 
 $sdk = new Aws\Sdk([
@@ -34,9 +34,8 @@ try {
       'Key' => $key,
       //'Body' => file_get_contents($filepath),
       //EntityBody::factory(fopen($filepath, 'r')),
-      'ACL'    => CannedAcl::PUBLIC_READ_WRITE,
       'SourceFile'   => $filepath,
-      //'ACL'          => 'public-read',
+      'ACL'          => 'public-read',
       //'ContentType' => mime_content_type($filepath)
   ]);
 
