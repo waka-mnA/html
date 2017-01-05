@@ -3,44 +3,48 @@
 session_start();
 
 if(!isset($_POST['login'])) {
+  //Display the login form
   inputForm();
 } else {
+  echo "TEST";
   $formUserId = $_POST['formUserid'];
   $formPassword = $_POST['formPassword'];
 
   //ID, PASWORD are not entered yet
   if(($formUserId == "") || ($formPassword == "")) {
     error(1);
-  } else {
-  //ID,PASSWORD are entered
+  }
+  else
+  {
+    //ID,PASSWORD are entered
     require_once('regist/db.php');
-  //get data from members table.
-  $query = "select * from members";
-  $result = mysqli_query($conn, $query);
+    //get data from members table.
+    $query = "select * from members";
+    $result = mysqli_query($conn, $query);
 
-  //If USERIDs are matched, store password from database into variable.
-  while($data = mysqli_fetch_array($result)) {
-    if($data['userid'] == $formUserId) {
-      $dbPassword = $data['password'];
-      break;
+    //If USERIDs are matched, store password from database into variable.
+    while($data = mysqli_fetch_array($result)) {
+      if($data['userid'] == $formUserId) {
+        $dbPassword = $data['password'];
+        break;
+      }
     }
-  }
 
-  mysqli_close($conn);
+    mysqli_close($conn);
 
-  if(!isset($dbPassword)) {
-    error(2);
-  } else {
-    if($dbPassword != $formPassword){
-    error(3);
-  } else {
-    //ID,password are matched.
-    //create session variable.
-    //register $formUserID into session variable.
-    $_SESSION['loginUser'] = $formUserId;
-    header("Location:test.php");
+    if(!isset($dbPassword)) {
+      error(2);
+    } else {
+      if($dbPassword != $formPassword){
+        error(3);
+      } else {
+        //ID,password are matched.
+        //create session variable.
+        //register $formUserID into session variable.
+        $_SESSION['loginUser'] = $formUserId;
+        header("Location:test.php");
+      }
     }
-  }
   }
 }
 ?>
@@ -78,7 +82,7 @@ if(!isset($_POST['login'])) {
     <label for="password">Password</label>:
     <input type="password" name="formPassword" id="password"/>
     <br />
-    <input type="submit" name="login" value="Login" />
+    <input class="btn btn-default" type="submit" name="login" value="Login" />
   </form>
   </article>
 
