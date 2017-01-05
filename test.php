@@ -62,9 +62,9 @@
 <body>
 	<?php include ($_SERVER['DOCUMENT_ROOT']. '/header.html'); ?>
 	<!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/nav.html'); ?> -->
-
-	Hello <?php print $loginUser; ?>!
-
+<article>
+	<h2> Hello <?php print $loginUser; ?>!</h2>
+</article>
 <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/aside.html'); ?>  -->
 <?php include ($_SERVER['DOCUMENT_ROOT']. '/footer.html');?>
 </body>
