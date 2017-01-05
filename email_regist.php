@@ -14,8 +14,8 @@ else{
   $pre_user_id = uniqid(rand(100,999));
 
   //SQL
-  $query = "insert into members (pre_userid, email) values('$pre_user_id'. '$email')";
-  $result = mysqli_query($query) or die(mysqli_error());
+  $query = "insert into members (pre_userid, email) values('$pre_user_id', '$email')";
+  $result = mysqli_query($query);
 
   //Check it is registered successfully
   if($result == false) {
