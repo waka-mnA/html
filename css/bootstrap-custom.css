@@ -43,6 +43,7 @@ td {
   border: none;
 }
 td.item {
+  font-size:1.8em;
   padding-left:8px;
   background: #E7E9EF;
   color: #22304C;

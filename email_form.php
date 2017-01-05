@@ -2,7 +2,7 @@
   <table><caption>E-mail Address Registration Form</caption>
     <tr>
       <td class="item">E-mail:</td>
-      <td><input type="text" name="email" size="40" /></td>
+      <td><input type="text" name="email" /></td>
     </tr>
   </table>
   <br />
