@@ -9,7 +9,7 @@
   // Bucket name
   $bucket = "comsm0010-wk13290";
   // Filename to be uploaded
-  $key = "sakura1.jpg";
+  $key = "sakura3.jpg";
 //echo "TEST0";
 
 $sdk = new Aws\Sdk([
@@ -20,8 +20,8 @@ $sdk = new Aws\Sdk([
 $client = $sdk->createS3();
 
 //Get file name
-//$filepath = $_FILES["upfile"]["tmp_name"];
-$filepath = "sakura1.jpg";
+$filepath = $_FILES["upfile"]["tmp_name"];
+echo $filepath;
 // if (!is_uploaded_file($filepath)) {
 //   die('File is not uploaded');
 // }
