@@ -40,7 +40,7 @@ if(!isset($_POST['login'])) {
         //create session variable.
         //register $formUserID into session variable.
          $_SESSION['loginUser'] = $formUserId;
-        //  header("Location:main.php");
+         header("Location:main.php");
        }
     }
   }
