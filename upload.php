@@ -10,7 +10,7 @@
   // Bucket name
   $bucket = "comsm0010-wk13290";
   // Filename to be uploaded
-  $key = "test/sakura1.jpg";
+  $key = "test/sakura2.jpg";
 //echo "TEST0";
 
 $sdk = new Aws\Sdk([
