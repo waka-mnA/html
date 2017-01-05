@@ -22,9 +22,9 @@ $client = $sdk->createS3();
 //Get file name
 $filepath = $_FILES["upfile"]["tmp_name"];
 
-// if (!is_uploaded_file($filepath)) {
-//   die('File is not uploaded');
-// }
+if (!is_uploaded_file($filepath)) {
+  die('File is not uploaded');
+}
 
 try {
   echo "TEST1";
@@ -34,7 +34,7 @@ try {
       //'Body' => file_get_contents($filepath),
       //EntityBody::factory(fopen($filepath, 'r')),
       'SourceFile'   => $filepath,
-      //'ACL'          => 'public-read',
+      'ACL'          => 'public-read',
       //'ContentType' => mime_content_type($filepath)
   ]);
 
