@@ -13,18 +13,18 @@ require_once('db.php');
 
 /* User ID Check */
 $query = "select userid from members where userid = '$input_userid'";
-$resultId = mysql_query($query);
+$resultId = mysqli_query($query);
 
-if(mysql_num_rows($resultId) > 0 ) {
+if(mysqli_num_rows($resultId) > 0 ) {
   array_push($error,"This User ID already exists.");
 }
 
 if(count($error) == 0) {
-  mysql_query("begin");
+  mysqli_query("begin");
   $query = "insert into members(userid, password, name, email) values('$input_userid','$input_password','$input_name','$input_email')";
   $result = mysql_query($query);
   if($result){
-    mysql_query("commit");
+    mysqli_query("commit");
 
     /* Send Confirmation E-mail.*/
     mb_language("english");
@@ -38,7 +38,7 @@ if(count($error) == 0) {
       array_push($error,"Could not send e-mail.<br>However, your registration is completed.");
     }
   } else {
-    mysql_query("rollback");
+    mysqli_query("rollback");
     array_push($error, "Could not register with database.");
   }
 }

@@ -16,7 +16,7 @@ if(!isset($_POST['login'])) {
     require_once('regist/db.php');
   //get data from members table.
   $query = "select * from members";
-  $result = mysql_query($query);
+  $result = mysqli_query($query);
 
   //If USERIDs are matched, store password from database into variable.
   while($data = mysql_fetch_array($result)) {

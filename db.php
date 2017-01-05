@@ -5,6 +5,11 @@ $password = "Hysks4212";
 $dbname = "member_test";
 
 /*Connect to database*/
-$conn = mysql_connect($server, $user, $password);
-mysql_select_db($dbname);
+$conn = mysqli_connect($server, $user, $password, $dbname);
+// mysql_select_db($dbname);
+
+if(mysqli_connect_errno() > 0){
+  echo "MYSQLI FAILED.";
+  exit;
+}
 ?>

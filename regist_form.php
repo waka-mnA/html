@@ -10,12 +10,12 @@ require_once("db.php");
 
 /* Use unique id to get registered email address */
 $query = "select email from members where pre_userid = '$pre_userid'";
-$result = mysql_query($query);
+$result = mysqli_query($query);
 
 /*Display retrieved address*/
-if(mysql_num_rows($result) > 0) {
+if(mysqli_num_rows($result) > 0) {
   $errorFlag = false;
-  $data = mysql_fetch_array($result);
+  $data = mysqli_fetch_array($result);
   $email = $data['email'];
 }
 

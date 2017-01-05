@@ -3,7 +3,11 @@
 $email = $_POST["email"];
 /*Error message*/
 $error = array();
+try{
 
+
+
+}
 require_once("db.php");
 
 /*Email Address Check*/
@@ -16,11 +20,11 @@ else{
 
   //SQL
   $query = "insert into members(pre_userid, email) values('$pre_user_id'. '$email')";
-  $result = mysql_query($query);
+  $result = mysqli_query($query);
 
   //Check it is registered successfully
   if($result == false) {
-    array_push($error, "Database Registration Failed.");
+    array_push($error, " Database Registration Failed.");
   }
   else {
     mb_language("english");
