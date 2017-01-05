@@ -3,7 +3,7 @@
     <caption>E-mail Address Registration Form</caption>
     <tr>
       <td class="item">E-mail:</td>
-      <td><input type="text" name="email" /></td>
+      <td><input type="text" name="email" size="20" /></td>
     </tr>
   </table>
   <br />
