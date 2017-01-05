@@ -19,20 +19,17 @@ else{
 
   //Check it is registered successfully
   if($result == false) {
-        echo "TEST1";
     array_push($error, " Database Registration Failed.");
   }
   else {
-    echo "TEST";
-    mb_language("english");
-    mb_internal_encoding("utf-8");
+    echo "Email has been sent to ".$email."<br>";
     $to = $email;
     $subject = "PhotoShare Registration";
     $message = "Click URL below to finish your registration.\n".
     "http://localhost/member_test/regist/index.php?pre_userid=$pre_user_id"; //localhost:8888
-    $header = "From:test@test.com";
+    $header = "From:test@test.com"."\r\n";
 
-    if(!mb_send_mail($to, $subject, $message, $header)) {
+    if(!mail($to, $subject, $message, $header)) {
       array_push($error,"Could not send <a href='http://localhost/member_test/regist/index.php?pre_userid=$pre_user_id'>e-mail.</a>");
     }
   }
