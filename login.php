@@ -39,7 +39,7 @@ if(!isset($_POST['login'])) {
         //ID,password are matched.
         //create session variable.
         //register $formUserID into session variable.
-        //  $_SESSION['loginUser'] = $formUserId;
+         $_SESSION['loginUser'] = $formUserId;
         //  header("Location:main.php");
        }
     }
