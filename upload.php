@@ -5,6 +5,7 @@
   use Aws\Common\Enum\Region;
   use Aws\S3\Exception\S3Exception;
   use Guzzle\Http\EntityBody;
+  use Aws\S3\Enum\CannedAcl;
 
   // Bucket name
   $bucket = "comsm0010-wk13290";
