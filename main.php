@@ -28,7 +28,7 @@
 
   <article>
 		<h1>You have not logged in.</h1>
-		Please login or register.
+		Please login or register.<br />
 		<a href="login.php" class="btn btn-default">Login</a><br />
 		<a href="regist/index.php" class="btn btn-default">Register</a>
   </article>
