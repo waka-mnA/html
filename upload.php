@@ -20,10 +20,10 @@ $sdk = new Aws\Sdk([
 $client = $sdk->createS3();
 
 //echo "TEST";
-  $tmpfile = $_FILES["upfile"]["tmp_name"];
+  //Get file name
+  $filepath = $_FILES["upfile"]["tmp_name"];
 
-  if (!is_uploaded_file($tmpfile)) {
-    echo "TESTdie";
+  if (!is_uploaded_file($filepath)) {
     die('File is not uploaded');
   }
 
@@ -32,8 +32,10 @@ $client = $sdk->createS3();
     $result = $client->putObject(array(
         'Bucket' => $bucket,
         'Key' => $key,
-        'Body' => EntityBody::factory(fopen($tmpfile, 'r')),
-        //'ContentType' => mime_content_type($tmpfile)
+        'Body' => EntityBody::factory(fopen($filepath, 'r')),
+        'SourceFile'   => $filepath,
+        'ACL'          => 'public-read',
+        //'ContentType' => mime_content_type($filepath)
     ));
 
       echo "Uploaded Successfully!";
