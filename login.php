@@ -14,7 +14,6 @@ if(!isset($_POST['login'])) {
   }
   else
   {
-    echo "TEST";
     //ID,PASSWORD are entered
     require_once('db.php');
     //get data from members table.
@@ -36,6 +35,7 @@ if(!isset($_POST['login'])) {
        if($dbPassword != $formPassword){
          error(3);
        } else {
+         echo "SUCCESS";
         //ID,password are matched.
         //create session variable.
         //register $formUserID into session variable.
