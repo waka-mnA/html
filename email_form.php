@@ -1,5 +1,5 @@
 <form action="index.php" method="post"><input type="hidden" name="mode" value="email_regist" />
-<table class="table table-striped table-hover ">
+<table>
     <caption>E-mail Address Registration Form</caption>
     <tr>
       <td class="item">E-mail:</td>

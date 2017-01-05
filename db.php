@@ -6,9 +6,9 @@ $dbname = "member_test";
 
 /*Connect to database*/
 $conn = mysqli_connect($server, $user, $password, $dbname);
-// mysql_select_db($dbname);
+
 if(mysqli_connect_errno() > 0){
   echo "MYSQLI FAILED.";
-  //exit;
+  exit;
 }
 ?>
