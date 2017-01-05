@@ -10,7 +10,7 @@
   $bucket = "comsm0010-wk13290";
   // Filename to be uploaded
   $key = "sakura.jpg";
-echo "TEST0";
+//echo "TEST0";
 
 $sdk = new Aws\Sdk([
   'profile' => 'default',
@@ -18,30 +18,24 @@ $sdk = new Aws\Sdk([
   'region'  => 'EU-WEST-2'
 ]);
 $client = $sdk->createS3();
-  // $client = S3Client::factory(array(
-  //   'credentials'=>[
-  //     'key'    => getenv('AWS_ACCESS_KEY_ID'),
-  //     'secret' => getenv('AWS_SECRET_ACCESS_KEY')
-  //   ],
-  //   'region' => Region::EU-WEST-2,
-  //   'version'=> 'latest'
-  //
-  // ));
-echo "TEST";
+
+//echo "TEST";
   $tmpfile = $_FILES["upfile"]["tmp_name"];
 
   if (!is_uploaded_file($tmpfile)) {
-      die('File is not uploaded');
+    echo "TESTdie";
+    die('File is not uploaded');
   }
-echo "TEST1";
+
   try {
-      $result = $client->putObject(array(
-          'Bucket' => $bucket,
-          'Key' => $key,
-          'Body' => EntityBody::factory(fopen($tmpfile, 'r')),
-          //'ContentType' => mime_content_type($tmpfile) 
-      ));
-          echo "TEST3";
+    echo "TEST1";
+    $result = $client->putObject(array(
+        'Bucket' => $bucket,
+        'Key' => $key,
+        'Body' => EntityBody::factory(fopen($tmpfile, 'r')),
+        //'ContentType' => mime_content_type($tmpfile)
+    ));
+
       echo "Uploaded Successfully!";
   } catch (S3Exception $exc) {
       echo "Upload Failed.";
