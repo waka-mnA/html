@@ -24,7 +24,7 @@ if($errorFlag) {  // pre_userid is invalid
 <table>
   <caption>E-mail Registration Error</caption>
   <tr>
-    <td class="item">Error：</td>
+    <td class="item">Error:</td>
     <td>This URL is unavailable.<br>Please try E-mail registration again.<br> <a href="index.php">Go Back</a></td>
   </tr>
 </table>
