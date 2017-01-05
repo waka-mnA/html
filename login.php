@@ -17,9 +17,9 @@ if(!isset($_POST['login'])) {
     echo "TEST";
     //ID,PASSWORD are entered
     require_once('db.php');
-    // //get data from members table.
-    // $query = "select * from members";
-    // $result = mysqli_query($conn, $query);
+    //get data from members table.
+    $query = "select * from members";
+    $result = mysqli_query($conn, $query);
     // //If USERIDs are matched, store password from database into variable.
     // while($data = mysqli_fetch_array($result)) {
     //   if($data['userid'] == $formUserId) {
