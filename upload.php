@@ -10,7 +10,7 @@
   $bucket = "comsm0010-wk13290";
   // Filename to be uploaded
   $key = "sakura.jpg";
-
+echo "TEST0";
 
   $client = S3Client::factory(array(
     "key" => "AKIAJNH4SBIA7MP6SB2Q",
