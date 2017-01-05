@@ -63,20 +63,14 @@
 	<?php include ($_SERVER['DOCUMENT_ROOT']. '/header.html'); ?>
 	<!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/nav.html'); ?> -->
 <article>
-	<h2> Hello <?php print $loginUser; ?>!</h2>
-
-
-
+	<h4> You are logged in as <?php print $loginUser; ?></h4>
 
   <form class="form-horizontal" method="post" enctype="multipart/form-data"  action="upload.php">
 		<div class="form-group">
-			<label for="uploadFile" class="col-lg-2 control-label">Choose file</label>
 			<div class="col-lg-10">
 				<input class="form-control" type="file" id="uploadFile" name="upfile">
 			</div>
 		</div>
-
-
     <button class="btn btn-default" type="submit">Upload</button>
   </form>
 
