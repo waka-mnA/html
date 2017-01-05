@@ -1,5 +1,5 @@
 <?php
-// require("aws.phar");
+ // require("aws.phar");
 require("phar://".dirname(__FILE__)."aws.phar/aws-autoloader.php");
 // use Aws\S3\S3Client;
 // use Aws\Common\Enum\Region;
