@@ -1,10 +1,11 @@
 <?php
 //create session
 session_start();
-
+echo "TESTtest";
 if(!isset($_POST['login'])) {
   //Display the login form
   inputForm();
+  echo "TESTinpu";
 } else {
 echo "TEST";
   $formUserId = $_POST['formUserid'];
@@ -16,6 +17,7 @@ echo "TEST";
   }
   else
   {
+    echo "TESTbefore";
     //ID,PASSWORD are entered
     require_once('db.php');
     echo "TEST2";
