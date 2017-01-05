@@ -12,15 +12,21 @@
   $key = "sakura.jpg";
 echo "TEST0";
 
-  $client = S3Client::factory(array(
-    'credentials'=>[
-      'key'    => getenv('AWS_ACCESS_KEY_ID'),
-      'secret' => getenv('AWS_SECRET_ACCESS_KEY')
-    ],
-    'region' => Region::EU-WEST-2,
-    'version'=> 'latest'
-
-  ));
+$sdk = new Aws\Sdk([
+  'profile' => 'default',
+  'version' => 'latest',
+  'region'  => 'EU-WEST-2'
+]);
+$client = $sdk->createS3();
+  // $client = S3Client::factory(array(
+  //   'credentials'=>[
+  //     'key'    => getenv('AWS_ACCESS_KEY_ID'),
+  //     'secret' => getenv('AWS_SECRET_ACCESS_KEY')
+  //   ],
+  //   'region' => Region::EU-WEST-2,
+  //   'version'=> 'latest'
+  //
+  // ));
 echo "TEST";
   $tmpfile = $_FILES["upfile"]["tmp_name"];
 
@@ -34,6 +40,7 @@ echo "TEST1";
           'Bucket' => $bucket,
           'Key' => $key,
           'Body' => EntityBody::factory(fopen($tmpfile, 'r')),
+          'ContentType' => mime_content_type($tmpfile) 
       ));
           echo "TEST3";
       echo "Uploaded Successfully!";
