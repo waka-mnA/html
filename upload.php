@@ -32,7 +32,8 @@ $client = $sdk->createS3();
     $result = $client->putObject(array(
         'Bucket' => $bucket,
         'Key' => $key,
-        'Body' => EntityBody::factory(fopen($filepath, 'r')),
+        'Body' => file_get_contents($filepath),
+        //EntityBody::factory(fopen($filepath, 'r')),
         'SourceFile'   => $filepath,
         'ACL'          => 'public-read',
         //'ContentType' => mime_content_type($filepath)

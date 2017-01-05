@@ -65,13 +65,13 @@
 <article>
 	<h4> You are logged in as <?php print $loginUser; ?></h4>
 
-  <form class="form-horizontal" method="post" enctype="multipart/form-data"  action="upload.php">
+  <form class="form-horizontal" method="POST" enctype="multipart/form-data"  action="upload.php">
 		<div class="form-group">
 			<div class="col-lg-10">
-				<input class="form-control" type="file" id="uploadFile" name="upfile">
+				<input class="form-control" id="uploadFile" type="file" name="upfile">
 			</div>
 		</div>
-    <button class="btn btn-default" type="submit">Upload</button>
+    <input class="btn btn-default" type="submit" value="Upload" />
   </form>
 
 
