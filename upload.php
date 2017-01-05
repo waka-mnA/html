@@ -15,7 +15,7 @@
 $sdk = new Aws\Sdk([
   'profile' => 'default',
   'version' => 'latest',
-  'region'  => 'EU-WEST-2'
+  'region'  => 'eu-west-2'
 ]);
 $client = $sdk->createS3();
 
