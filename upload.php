@@ -17,22 +17,25 @@
     "secret" => "nmfqaFDHgIUnTFR0DcvNk8PX9QUrJDkn2Sh4lsm5",
     "region" => Region::EU-WEST-2
   ));
-
+echo "TEST";
   $tmpfile = $_FILES["upfile"]["tmp_name"];
 
   if (!is_uploaded_file($tmpfile)) {
       die('File is not uploaded');
   }
-
+echo "TEST1";
   try {
+
       $result = $client->putObject(array(
           'Bucket' => $bucket,
           'Key' => $key,
           'Body' => EntityBody::factory(fopen($tmpfile, 'r')),
       ));
+          echo "TEST3";
       echo "Uploaded Successfully!";
   } catch (S3Exception $exc) {
       echo "Upload Failed.";
       echo $exc->getMessage();
   }
+  echo "TEST2";
 ?>
