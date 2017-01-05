@@ -15,8 +15,8 @@ if(!isset($_POST['login'])) {
   else
   {
     echo "TEST";
-    // //ID,PASSWORD are entered
-    // require_once('db.php');
+    //ID,PASSWORD are entered
+    require_once('db.php');
     // //get data from members table.
     // $query = "select * from members";
     // $result = mysqli_query($conn, $query);
