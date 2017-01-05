@@ -3,7 +3,6 @@
 session_start();
 
 if(!isset($_POST['login'])) {
-  echo "TEST";
   inputForm();
 } else {
   $formUserId = $_POST['formUserid'];
@@ -55,6 +54,15 @@ if(!isset($_POST['login'])) {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Login</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery Reading -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap JS Reading -->
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" media="screen" href="/css/bootstrap-custom.css">
 </head>
 
 <body>
@@ -94,6 +102,15 @@ function error($errorType) {
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Login</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery Reading -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Bootstrap JS Reading -->
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" media="screen" href="/css/bootstrap-custom.css">
 </head>
 
 <body>
