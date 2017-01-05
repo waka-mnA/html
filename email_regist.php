@@ -15,7 +15,7 @@ else{
 
   //SQL
   $query = "insert into members (pre_userid, email) values('$pre_user_id'. '$email')";
-  $result = mysqli_query($query);
+  $result = mysqli_query($query)or die(mysqli_error($db));
 
   //Check it is registered successfully
   if($result == false) {
