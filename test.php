@@ -19,8 +19,8 @@
   <article>
 		<h1>You have not logged in.</h1>
 		Please login or register.
-		<a href="login.php">Login</a><br />
-		<a href="regist/index.php">Register</a>
+		<a href="login.php" class="btn btn-default">Login</a><br />
+		<a href="regist/index.php" class="btn btn-default">Register</a>
   </article>
 
   <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/aside.html'); ?>  -->
@@ -39,7 +39,7 @@
 <title>User Page</title>
 </head>
 
-<body>	
+<body>
 	<?php include ($_SERVER['DOCUMENT_ROOT']. '/header.html'); ?>
 	<!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/nav.html'); ?> -->
 

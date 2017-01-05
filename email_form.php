@@ -8,8 +8,10 @@
   <br />
   <div>
 <input class "btn btn-default" type="submit" name="submit" value="Submit" />
-
-<a href="login.php">If you are already our user, Login</a><br />
+<br />
+<br />
+If you are already our user,<br />
+<a href="login.php" class="btn btn-default">Login</a><br />
 </div>
 
 </form>
