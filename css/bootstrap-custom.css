@@ -23,7 +23,7 @@ a:hover {
 body {
   background: #FFF;
   font-family:Osaka,sans-serif;
-  font-size: 0.75em;
+  font-size: 1em;
   color: #22304C;
 }
 table {
@@ -35,11 +35,11 @@ table {
 caption {
   margin-bottom: 10px;
   text-align: left;
-  font-size: 1.6em;
+  font-size: 2em;
   color: #000;
 }
 td {
-  padding: 8px 0px 8px 15px;
+  padding: 0px;
   border: 1px solid #B5BBC8;
 }
 td.item {
