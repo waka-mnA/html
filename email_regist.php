@@ -45,7 +45,7 @@ if(count($error) > 0) {
     <table>
     <caption>E-mail Registration Error</caption>
     <tr>
-      <td class="item">Error:</td>
+      <td class="item">Error: </td>
       <td><?php print $value; ?></td>
     </tr>
   </table>
