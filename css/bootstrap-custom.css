@@ -9,7 +9,7 @@ article{
 
 }
 footer{
-  font-size:0.8em;
+  font-size:1.2em;
   padding-left:2em;
 }
 
@@ -23,6 +23,7 @@ a:hover {
 body {
   background: #FFF;
   font-family:Osaka,sans-serif;
+  font-size: 0.8em;
   color: #22304C;
 }
 table {
