@@ -19,30 +19,29 @@ $sdk = new Aws\Sdk([
 ]);
 $client = $sdk->createS3();
 
-//echo "TEST";
-  //Get file name
-  $filepath = $_FILES["upfile"]["tmp_name"];
+//Get file name
+$filepath = $_FILES["upfile"]["tmp_name"];
 
-  if (!is_uploaded_file($filepath)) {
-    die('File is not uploaded');
-  }
+if (!is_uploaded_file($filepath)) {
+  die('File is not uploaded');
+}
 
-  try {
-    echo "TEST1";
-    $result = $client->putObject(array(
-        'Bucket' => $bucket,
-        'Key' => $key,
-        'Body' => file_get_contents($filepath),
-        //EntityBody::factory(fopen($filepath, 'r')),
-        'SourceFile'   => $filepath,
-        'ACL'          => 'public-read',
-        //'ContentType' => mime_content_type($filepath)
-    ));
+try {
+  echo "TEST1";
+  $result = $client->putObject([
+      'Bucket' => $bucket,
+      'Key' => $key,
+      //'Body' => file_get_contents($filepath),
+      //EntityBody::factory(fopen($filepath, 'r')),
+      'SourceFile'   => $filepath,
+      //'ACL'          => 'public-read',
+      //'ContentType' => mime_content_type($filepath)
+  ]);
 
-      echo "Uploaded Successfully!";
-  } catch (S3Exception $exc) {
-      echo "Upload Failed.";
-      echo $exc->getMessage();
-  }
-  echo "TEST2";
+    echo "Uploaded Successfully!";
+} catch (S3Exception $exc) {
+    echo "Upload Failed.";
+    echo $exc->getMessage();
+}
+echo "TEST2";
 ?>
