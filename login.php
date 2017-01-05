@@ -27,11 +27,12 @@ if(!isset($_POST['login'])) {
         break;
       }
     }
-    // mysqli_close($conn);
-    //
-    // if(!isset($dbPassword)) {
-    //   error(2);
-    // } else {
+    mysqli_close($conn);
+
+    if(!isset($dbPassword)) {
+      error(2);
+    }
+    // else {
     //   if($dbPassword != $formPassword){
     //     error(3);
     //   } else {
