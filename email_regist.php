@@ -17,8 +17,12 @@ else{
   $query = "insert into members (pre_userid, email) values('$pre_user_id', '$email')";
   $result = mysqli_query($query);
 echo $result;
+if ($result == null){
+
+    array_push($error, " Database Registration null.");
+}
   //Check it is registered successfully
-  if($result == false) {
+  else if($result == false) {
     array_push($error, " Database Registration Failed.");
   }
   else {
