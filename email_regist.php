@@ -3,7 +3,7 @@
 $email = $_POST["email"];
 /*Error message*/
 $error = array();
-require_once("db.php");
+require("db.php");
 
 /*Email Address Check*/
 if ($email == ""){
