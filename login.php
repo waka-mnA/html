@@ -66,6 +66,10 @@ if(!isset($_POST['login'])) {
 </head>
 
 <body>
+  <?php include ($_SERVER['DOCUMENT_ROOT']. '/header.html'); ?>
+  <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/nav.html'); ?> -->
+
+  <article>
   <h1>Login</h1>
   <form action="login.php" method="post">
     <label for="userid">User ID</label>:
@@ -76,6 +80,10 @@ if(!isset($_POST['login'])) {
     <br />
     <input type="submit" name="login" value="Login" />
   </form>
+  </article>
+
+  <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/aside.html'); ?>  -->
+  <?php include ($_SERVER['DOCUMENT_ROOT']. '/footer.html');?>
 </body>
 
 </html>
@@ -114,10 +122,19 @@ function error($errorType) {
 </head>
 
 <body>
-  <h1>Error</h1>
-  <?php
-    print $errorMsg;
-  ?>
+  <?php include ($_SERVER['DOCUMENT_ROOT']. '/header.html'); ?>
+  <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/nav.html'); ?> -->
+
+  <article>
+    <h1>Error</h1>
+    <?php
+      print $errorMsg;
+    ?>
+  </article>
+
+  <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/aside.html'); ?>  -->
+  <?php include ($_SERVER['DOCUMENT_ROOT']. '/footer.html');?>
+</body>
 </body>
 </html>
 <?php
