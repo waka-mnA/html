@@ -13,9 +13,13 @@
 echo "TEST0";
 
   $client = S3Client::factory(array(
-    'key'    => getenv('AWS_ACCESS_KEY_ID'),
-    'secret' => getenv('AWS_SECRET_ACCESS_KEY'),
-    "region" => Region::EU-WEST-2
+    'credentials'=>[
+      'key'    => getenv('AWS_ACCESS_KEY_ID'),
+      'secret' => getenv('AWS_SECRET_ACCESS_KEY')
+    ],
+    'region' => Region::EU-WEST-2,
+    'version'=> 'latest'
+
   ));
 echo "TEST";
   $tmpfile = $_FILES["upfile"]["tmp_name"];
