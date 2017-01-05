@@ -12,7 +12,7 @@
   // Filename to be uploaded
   $key = "test/sakura2.jpg";
 //echo "TEST0";
-echo $_SERVER['AWS_ACCESS_KEY_ID'];
+echo $_ENV['AWS_ACCESS_KEY_ID'];
 // echo getenv("AWS_ACCESS_KEY_ID".'\n');
 // echo getenv("AWS_SECRET_ACCESS_KEY".'\n');
 
