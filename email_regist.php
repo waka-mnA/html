@@ -22,16 +22,17 @@ else{
     array_push($error, " Database Registration Failed.");
   }
   else {
+    echo "TEST;
     mb_language("english");
     mb_internal_encoding("utf-8");
     $to = $email;
     $subject = "PhotoShare Registration";
     $message = "Click URL below to finish your registration.\n".
-    "http://localhost:8888/member_test/regist/index.php?pre_userid=$pre_user_id";
+    "http://localhost/member_test/regist/index.php?pre_userid=$pre_user_id"; //localhost:8888
     $header = "From:test@test.com";
 
     if(!mb_send_mail($to, $subject, $message, $header)) {
-      array_push($error,"Could not send <a href='http://localhost:8888/member_test/regist/index.php?pre_userid=$pre_user_id'>e-mail.</a>");
+      array_push($error,"Could not send <a href='http://localhost/member_test/regist/index.php?pre_userid=$pre_user_id'>e-mail.</a>");
     }
   }
 }
