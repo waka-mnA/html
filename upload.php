@@ -1,5 +1,5 @@
 <?php
-  require("aws.phar");
+  require_once 'aws.phar';
   //require("phar://".dirname(__FILE__)."aws.phar/aws-autoloader.php");
   use Aws\S3\S3Client;
   use Aws\Common\Enum\Region;
@@ -13,8 +13,8 @@
 echo "TEST0";
 
   $client = S3Client::factory(array(
-    "key" => "",
-    "secret" => "",
+    'key'    => getenv('AWS_ACCESS_KEY_ID'),
+    'secret' => getenv('AWS_SECRET_ACCESS_KEY'),
     "region" => Region::EU-WEST-2
   ));
 echo "TEST";
