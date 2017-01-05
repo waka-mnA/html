@@ -20,13 +20,13 @@ if(!isset($_POST['login'])) {
     //get data from members table.
     $query = "select * from members";
     $result = mysqli_query($conn, $query);
-    // //If USERIDs are matched, store password from database into variable.
-    // while($data = mysqli_fetch_array($result)) {
-    //   if($data['userid'] == $formUserId) {
-    //     $dbPassword = $data['password'];
-    //     break;
-    //   }
-    // }
+    //If USERIDs are matched, store password from database into variable.
+    while($data = mysqli_fetch_array($result)) {
+      if($data['userid'] == $formUserId) {
+        $dbPassword = $data['password'];
+        break;
+      }
+    }
     // mysqli_close($conn);
     //
     // if(!isset($dbPassword)) {
