@@ -35,12 +35,11 @@ echo "TEST";
   }
 echo "TEST1";
   try {
-
       $result = $client->putObject(array(
           'Bucket' => $bucket,
           'Key' => $key,
           'Body' => EntityBody::factory(fopen($tmpfile, 'r')),
-          'ContentType' => mime_content_type($tmpfile) 
+          //'ContentType' => mime_content_type($tmpfile) 
       ));
           echo "TEST3";
       echo "Uploaded Successfully!";
