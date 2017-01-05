@@ -20,6 +20,7 @@ if(!isset($_POST['login'])) {
     $query = "select * from members";
     $result = mysqli_query($conn, $query);
     //If USERIDs are matched, store password from database into variable.
+              echo "TEST0";
     while($data = mysqli_fetch_array($result)) {
       if($data['userid'] == $formUserId) {
         $dbPassword = $data['password'];
