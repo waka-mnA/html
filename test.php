@@ -21,7 +21,7 @@
   <link rel="stylesheet" media="screen" href="/css/bootstrap-custom.css">
 </head>
 
-	
+
 <body>
 	<?php include ($_SERVER['DOCUMENT_ROOT']. '/header.html'); ?>
   <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/nav.html'); ?> -->
@@ -45,9 +45,19 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>User Page</title>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhotoShare.com</title>
+	<!-- Bootstrap CSS Reading -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery Reading -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Bootstrap JS Reading -->
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" media="screen" href="/css/bootstrap-custom.css">
 </head>
+
 
 <body>
 	<?php include ($_SERVER['DOCUMENT_ROOT']. '/header.html'); ?>
