@@ -14,6 +14,8 @@ if(!isset($_POST['login'])) {
   }
   else
   {
+
+      echo "TEST";
     //ID,PASSWORD are entered
     require_once('db.php');
     //get data from members table.
