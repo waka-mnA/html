@@ -49,7 +49,9 @@ if(count($error) == 0) {
     <td>Thank you for registration.<br>Please check the confirmation e-mail.</td>
   </tr>
 </table>
+<div>
 <a href="login.php" class="btn btn-default">Login</a><br />
+</div>
 <?php
 } else {
 ?>
