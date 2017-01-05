@@ -7,7 +7,7 @@
   </table>
   <br />
   <div>
-  <a href="#" class="btn btn-default"><input type="submit" name="submit" value="Submit" /></a>
+<input class "btn btn-default" type="submit" name="submit" value="Submit" />
 </div>
 
 </form>
