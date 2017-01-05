@@ -12,3 +12,4 @@ if(mysqli_connect_errno() > 0){
   exit;
 }
 ?>
+<!-- 2017-01-05T07:07:20.300824Z 3 [Note] Access denied for user 'UNKNOWN_MYSQL_USER'@'localhost' (using password: NO) -->
