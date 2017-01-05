@@ -1,53 +1,47 @@
 <?php
 //create session
 session_start();
-echo "TESTtest";
+
 if(!isset($_POST['login'])) {
   //Display the login form
   inputForm();
-  echo "TESTinpu";
 } else {
-echo "TEST";
   $formUserId = $_POST['formUserid'];
   $formPassword = $_POST['formPassword'];
   //ID, PASWORD are not entered yet
   if(($formUserId == "") || ($formPassword == "")) {
     error(1);
-    echo "TEST1";
   }
   else
   {
-    echo "TESTbefore";
-    //ID,PASSWORD are entered
-    require_once('db.php');
-    echo "TEST2";
-    //get data from members table.
-    $query = "select * from members";
-    $result = mysqli_query($conn, $query);
-    //If USERIDs are matched, store password from database into variable.
-    while($data = mysqli_fetch_array($result)) {
-      if($data['userid'] == $formUserId) {
-        $dbPassword = $data['password'];
-        break;
-      }
-    }
-echo "TEST"3;
-    mysqli_close($conn);
-
-    if(!isset($dbPassword)) {
-      error(2);
-    } else {
-      if($dbPassword != $formPassword){
-        error(3);
-      } else {
-        //ID,password are matched.
-        //create session variable.
-        //register $formUserID into session variable.
-        $_SESSION['loginUser'] = $formUserId;
-        header("Location:main.php");
-      }
-    }
-    echo "TEST4";
+    echo "TEST";
+    // //ID,PASSWORD are entered
+    // require_once('db.php');
+    // //get data from members table.
+    // $query = "select * from members";
+    // $result = mysqli_query($conn, $query);
+    // //If USERIDs are matched, store password from database into variable.
+    // while($data = mysqli_fetch_array($result)) {
+    //   if($data['userid'] == $formUserId) {
+    //     $dbPassword = $data['password'];
+    //     break;
+    //   }
+    // }
+    // mysqli_close($conn);
+    //
+    // if(!isset($dbPassword)) {
+    //   error(2);
+    // } else {
+    //   if($dbPassword != $formPassword){
+    //     error(3);
+    //   } else {
+    //     //ID,password are matched.
+    //     //create session variable.
+    //     //register $formUserID into session variable.
+    //     $_SESSION['loginUser'] = $formUserId;
+    //     header("Location:main.php");
+    //   }
+    // }
   }
 }
 ?>
@@ -61,7 +55,6 @@ echo "TEST"3;
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Login</title>
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -92,7 +85,6 @@ echo "TEST"3;
   <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/aside.html'); ?>  -->
   <?php include ($_SERVER['DOCUMENT_ROOT']. '/footer.html');?>
 </body>
-
 </html>
 <?php
 }
