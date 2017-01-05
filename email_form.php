@@ -8,6 +8,8 @@
   <br />
   <div>
 <input class "btn btn-default" type="submit" name="submit" value="Submit" />
+
+<a href="login.php">If you are already our user, Login</a><br />
 </div>
 
 </form>
