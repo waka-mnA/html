@@ -6,12 +6,13 @@ if(!isset($_POST['login'])) {
   //Display the login form
   inputForm();
 } else {
-
+echo "TEST";
   $formUserId = $_POST['formUserid'];
   $formPassword = $_POST['formPassword'];
   //ID, PASWORD are not entered yet
   if(($formUserId == "") || ($formPassword == "")) {
     error(1);
+    echo "TEST1";
   }
   else
   {
