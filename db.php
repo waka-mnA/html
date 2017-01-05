@@ -1,7 +1,7 @@
 <?php /*Database Setting*/
 $server = "localhost";
 $user = "root";
-$password = "root";
+$password = "Hysks4212";
 $dbname = "member_test";
 
 /*Connect to database*/
