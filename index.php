@@ -1,3 +1,40 @@
+
+<?php
+/* Change the file to be read depends on registration operation*/
+$mode = $_POST["mode"];
+
+/* Show Registration form */
+if($_GET['pre_userid'] !="") {
+  $mode = "regist_form";
+}
+
+switch($mode) {
+  // Register e-mail and send pre-id
+  case"email_regist":
+  $module = "email_regist.php";
+  break;
+
+  //Reg form
+  case"regist_form":
+  $module = "regist_form.php";
+  break;
+
+  //Confirmation
+  case"regist_confirm":
+  $module = "regist_confirm.php";
+  break;
+
+  //User reg.
+  case"user_regist":
+  $module = "user_regist.php";
+  break;
+
+  default:
+  $module = "email_form.php";
+  break;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +55,7 @@
   <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/nav.html'); ?> -->
 
   <article>
-      <h2>Contents</h2>
-      <p>Txt Txt Txt Txt Txt</p>
+    <?php require_once($module) ?>
   </article>
 
   <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/aside.html'); ?>  -->
