@@ -13,13 +13,14 @@
   $key = "test/sakura2.jpg";
 //echo "TEST0";
 
+echo getenv("AWS_ACCESS_KEY_ID".'\n');
+echo getenv("AWS_SECRET_ACCESS_KEY".'\n');
+
 $sdk = new Aws\Sdk([
   'profile' => 'default',
   'version' => 'latest',
   'region'  => 'eu-west-2'
 ]);
-echo getenv("AWS_ACCESS_KEY_ID".'\n');
-echo getenv("AWS_SECRET_ACCESS_KEY".'\n');
 $client = $sdk->createS3();
 
 //Get file name
