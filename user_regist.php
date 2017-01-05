@@ -30,7 +30,7 @@ if(count($error) == 0) {
     $to = $input_email;
     $subject = "User Registration Confirmation.";
     $message = "Thank you for registration.\n"."Your User ID is [$input_userid].";
-    $header = "From PhotoShare@photoshare.com"."\r\n";
+    $header = "From PhotoShare.com"."\r\n";
 
     if(!mail($to, $subject, $message, $header)) {
       array_push($error,"Could not send e-mail.<br>However, your registration is completed.");
@@ -45,7 +45,7 @@ if(count($error) == 0) {
 <table>
   <caption>Registration Completed.</caption>
   <tr>
-    <td class="item">Thanks:</td>
+    <td class="item"> </td>
     <td>Thank you for registration.<br>Please check the confirmation e-mail.</td>
   </tr>
 </table>

@@ -26,7 +26,7 @@ else{
     $subject = "PhotoShare Registration";
     $message = "Click URL below to finish your registration.\n".
     "http://52.56.67.132/index.php?pre_userid=$pre_user_id"; //localhost:8888
-    $header = "From PhotoShare@photoshare.com"."\r\n";
+    $header = "From PhotoShare.com"."\r\n";
 
     if(!mail($to, $subject, $message, $header)) {
       array_push($error,"Could not send <a href='http://52.56.67.132/index.php?pre_userid=$pre_user_id'>e-mail.</a>");
