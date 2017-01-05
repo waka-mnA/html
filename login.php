@@ -14,8 +14,6 @@ if(!isset($_POST['login'])) {
   }
   else
   {
-
-      echo "TEST";
     //ID,PASSWORD are entered
     require_once('db.php');
     //get data from members table.
@@ -28,6 +26,7 @@ if(!isset($_POST['login'])) {
         break;
       }
     }
+          echo "TEST";
     mysqli_close($conn);
 
     if(!isset($dbPassword)) {
