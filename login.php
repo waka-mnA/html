@@ -16,17 +16,17 @@ if(!isset($_POST['login'])) {
     require_once('regist/db.php');
   //get data from members table.
   $query = "select * from members";
-  $result = mysqli_query($query);
+  $result = mysqli_query($conn, $query);
 
   //If USERIDs are matched, store password from database into variable.
-  while($data = mysql_fetch_array($result)) {
+  while($data = mysqli_fetch_array($result)) {
     if($data['userid'] == $formUserId) {
       $dbPassword = $data['password'];
       break;
     }
   }
 
-  mysql_close($conn);
+  mysqli_close($conn);
 
   if(!isset($dbPassword)) {
     error(2);
