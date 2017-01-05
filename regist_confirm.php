@@ -38,7 +38,7 @@ if(count($error) > 0) {
 <form method="post" action="index.php">
   <input type="hidden" name="mode" value="user_regist">
   <table>
-    <caption>To Preview</caption>
+    <caption>Confirm your information</caption>
     <tr>
       <td class="item">Username:</td>
       <td><?php print $input_userid;?><input type="hidden" name="input_userid" value="<?php print $input_userid;?>"></td>

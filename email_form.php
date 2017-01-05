@@ -5,5 +5,9 @@
       <td><input type="text" name="email" size="40" /></td>
     </tr>
   </table>
-  <div><input type="submit" name="submit" value="Submit" /></div>
+  <br />
+  <div>
+  <a href="#" class="btn btn-default"><input type="submit" name="submit" value="Submit" /></a>
+</div>
+
 </form>

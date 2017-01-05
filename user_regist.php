@@ -22,7 +22,7 @@ if(mysqli_num_rows($resultId) > 0 ) {
 if(count($error) == 0) {
   mysqli_query("begin");
   $query = "insert into members(userid, password, name, email) values('$input_userid','$input_password','$input_name','$input_email')";
-  $result = mysql_query($query);
+  $result = mysqli_query($conn, $query);
   if($result){
     mysqli_query("commit");
 
@@ -30,7 +30,7 @@ if(count($error) == 0) {
     $to = $input_email;
     $subject = "User Registration Confirmation.";
     $message = "Thank you for registration.\n"."Your User ID is [$input_userid].";
-    $header = "From:PhotoShare@photoshare.com";
+    $header = "From PhotoShare@photoshare.com"."\r\n";
 
     if(!mail($to, $subject, $message, $header)) {
       array_push($error,"Could not send e-mail.<br>However, your registration is completed.");
