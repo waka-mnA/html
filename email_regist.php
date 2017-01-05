@@ -15,7 +15,7 @@ else{
 
   //SQL
   $query = "insert into members (pre_userid, email) values('$pre_user_id', '$email')";
-  $result = mysqli_query($query);
+  $result = mysqli_query($conn, $query);
 echo $result;
 if ($result == null){
 
