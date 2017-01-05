@@ -27,14 +27,12 @@ if(count($error) == 0) {
     mysqli_query("commit");
 
     /* Send Confirmation E-mail.*/
-    mb_language("english");
-    mb_internal_encoding("utf-8");
     $to = $input_email;
     $subject = "User Registration Confirmation.";
     $message = "Thank you for registration.\n"."Your User ID is [$input_userid].";
-    $header = "From:test@test.com";
+    $header = "From:PhotoShare@photoshare.com";
 
-    if(!mb_send_mail($to, $subject, $message, $header)) {
+    if(!mail($to, $subject, $message, $header)) {
       array_push($error,"Could not send e-mail.<br>However, your registration is completed.");
     }
   } else {
