@@ -12,7 +12,7 @@
   // Bucket name
   $bucket = "comsm0010-wk13290";
   // Filename to be uploaded
-  $key = "test/sakura2.jpg";
+  $key = "test/sakura4.jpg";
   $bucketpath='/mnt/s3/';
 //echo "TEST0";
 
