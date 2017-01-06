@@ -33,6 +33,8 @@
 
 try{
   if(is_uploaded_file($_FILES['upfile']['tmp_name'])){
+    echo $_FILES['upfile']['tmp_name'];
+    echo $bucketpath.$key;
     move_uploaded_file($_FILES['upfile']['tmp_name'], $bucketpath.$key);
     echo 'Uploaded Successfully!';
   }
