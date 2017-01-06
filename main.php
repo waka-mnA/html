@@ -77,7 +77,7 @@
 
 	<!-- Display photos -->
 	<?php
-	$path = '/mnt/s3test/';
+	$path = 'images/';
 	$array = scandir($path,1);
 	$num = count($array);
 
@@ -86,8 +86,7 @@
 	$cnt = 0;
 
 	for ($i=0;$i<$num;$i++){
-		$filename = '/mnt/s3test/'.$array[$i];
-		//"http://52.56.67.132/images/" . $array[$i];
+		$filename = "http://52.56.67.132/images/" . $array[$i];
 		//If extension = gif/jpg/png
 		//Display as original size
 

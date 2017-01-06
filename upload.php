@@ -21,11 +21,11 @@
     <?php
 
     $bucket = "comsm0010-wk13290";
-    $keydir = "test/";
+    $keydir = "";
     //Get the original name of the file
     $key = $_FILES["upfile"]["name"];
     //Directory mounted with AWS S3
-    $bucketpath='/mnt/s3test/';
+    $bucketpath='images/';
 
     $tmpFile = $_FILES['upfile']['tmp_name'];
     echo $key.'   ';
