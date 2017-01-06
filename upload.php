@@ -27,7 +27,7 @@
 //     'profile' => 'default',
 //     'version' => 'latest',
 // ));
-$s3 = new S3(getenv("AWS_ACCESS_KEY_ID"), getenv("AWS_SECRET_ACCESS_KEY"));
+$s3 = new S3Client(getenv("AWS_ACCESS_KEY_ID"), getenv("AWS_SECRET_ACCESS_KEY"));
 
 
 //Get file name
