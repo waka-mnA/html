@@ -27,7 +27,7 @@
     $tmpFile = $_FILES['upfile']['tmp_name'];
 
     if (is_uploaded_file($_FILES["upfile"]["tmp_name"])) {
-system('chmod 770 '.$bucketpath.$keydir);exit;
+      system('chmod 777 '.$bucketpath.$keydir);exit;
 
       if (move_uploaded_file($tmpFile,  $bucketpath.$keydir.$key)){
         chmod($bucketpath.$keydir.$key, 0644);
