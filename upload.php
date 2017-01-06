@@ -37,7 +37,7 @@
       }
       else if (move_uploaded_file($tmpFile,  $bucketpath.$keydir.$key)){
         //chmod($bucketpath.$keydir.$key, 0644);
-        echo "<h2>Success!</h2>";
+        echo "<h2>Success! The photo is saved as".$key."</h2>";
       } else {
         echo "<h2>Upload Failed.</h2>";
       }
