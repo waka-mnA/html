@@ -1,5 +1,5 @@
 <?php
-  require_once ($_SERVER['DOCUMENT_ROOT']. '/aws.phar');
+  require_once ('aws.phar');
   //require("phar://".dirname(__FILE__)."aws.phar/aws-autoloader.php");
   use Aws\S3\S3Client;
   use Aws\Common\Enum\Region;
