@@ -12,8 +12,6 @@
   // Filename to be uploaded
   $key = "test/sakura2.jpg";
 //echo "TEST0";
- echo getenv("AWS_ACCESS_KEY_ID").'\rTEST';
-// echo getenv("AWS_SECRET_ACCESS_KEY".'\n');
 
 // $sdk = new Aws\Sdk([
 //   'profile' => 'default',
@@ -26,7 +24,10 @@ $s3 = S3Client::factory(array(
     "key" => getenv("AWS_ACCESS_KEY_ID"),
     "secret" => getenv("AWS_SECRET_ACCESS_KEY"),
     "region" => 'eu-west-2',
+    'profile' => 'default',
+    'version' => 'latest',
 ));
+
 
 //Get file name
 $filepath = $_FILES["upfile"]["tmp_name"];
@@ -39,6 +40,8 @@ echo getenv('HOME');
 try {
   echo "TEST1";
   $result = $client->putObject([
+
+
       'Bucket' => $bucket,
       'Key' => $key,
       'Body' => file_get_contents($filepath),
