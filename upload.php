@@ -38,7 +38,7 @@ $tmpFile = 'sakura1.jpg';
 try{
   // if(is_uploaded_file($_FILES['upfile']['tmp_name'])){
     //echo $_FILES['upfile']['tmp_name']."<br />";;
-    echo $bucketpath.$keydir."<br />";
+    echo $bucketpath.$keydir.$key."\r\n";
     $result = move_uploaded_file($tmpFile, $bucketpath.$keydir.$key);
     if ( $result === true ) {
       echo 'Uploaded Successfully!'."<br />";
@@ -58,11 +58,11 @@ try{
 
 
 //Get file name
-$filepath = $_FILES["upfile"]["tmp_name"];
-$type = $_FILES['upfile']["type"];
-$filepath="sakura1.jpg";
-
-$fileName = $_FILES['upfile']['name'];
+// $filepath = $_FILES["upfile"]["tmp_name"];
+// $type = $_FILES['upfile']["type"];
+// $filepath="sakura1.jpg";
+//
+// $fileName = $_FILES['upfile']['name'];
 
 // if (!is_uploaded_file($filepath)) {
 //   die('File is not uploaded');
