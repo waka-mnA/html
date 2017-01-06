@@ -97,7 +97,7 @@
 			 Eregi('png$', $filename))
 		{
 			//echo"<td width=\"200\">".$filename . "</td>";
-			echo "<td><a href=" .$filename . "><img src = " .$filename. "></a>".$array[$i] . "</td>";
+			echo "<td class="image"><a href=" .$filename . "><img src = " .$filename. "></a>".$array[$i] . "</td>";
 
 
 			$cnt = $cnt + 1;

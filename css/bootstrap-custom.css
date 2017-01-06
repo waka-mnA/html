@@ -70,7 +70,7 @@ font-size:1.8em;
 }
 
 
-td {
+td.image {
 display: table-cell; /*ã‰º’†‰›*/
 width: 120px;
 height: 150px;
