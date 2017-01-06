@@ -15,7 +15,7 @@
   $keydir = "test/";
 
   $key = "sakura4.jpg";
-  $bucketpath='/mnt/s3/';
+  $bucketpath='/mnt/s3test/';
 //echo "TEST0";
 
 // $sdk = new Aws\Sdk([
