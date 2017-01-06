@@ -76,17 +76,17 @@ img.gallery{
   max-height:200px;
 }
 
-table.gallery td {
+.my-gallery td {
 width: 300px;
 height: 200px;
 text-align: center; /*¶‰E’†‰›*/
 vertical-align: middle; /*ã‰º’†‰›*/
 layout-grid-line:166px; /*IE7*/
 }
-td a {
+.my-gallery td a {
 width:auto;
 height:auto;
-max-width:120px;
-max-height:150px;
+max-width:300px;
+max-height:200px;
 vertical-align: middle;/*IE7*/
 }
