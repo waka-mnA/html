@@ -35,10 +35,10 @@
 
 try{
   if(is_uploaded_file($_FILES['upfile']['tmp_name'])){
-    echo $_FILES['upfile']['tmp_name'].'\r\n';;
-    echo $bucketpath.$key.'\r\n';
+    echo $_FILES['upfile']['tmp_name']."\r\n";;
+    echo $bucketpath.$keydir."\r\n";
     move_uploaded_file($_FILES['upfile']['tmp_name'], $bucketpath.$keydir);
-    echo 'Uploaded Successfully!'.'\r\n';
+    echo 'Uploaded Successfully!'."\r\n";
   }
 
 }catch(Exception $e) {
