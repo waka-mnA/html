@@ -48,7 +48,7 @@ try {
   //$s3->putBucket("comsm0010-wk13290", S3Cl::ACL_PUBLIC_READ);
 
 //move the file
-if ($s3->putObjectFile($filepath, $bucket, $fileName, S3::ACL_PUBLIC_READ)) {
+if ($s3->putObjectFile($filepath, $bucket, $fileName, 'public-read')) {
     echo "We successfully uploaded your file.";
 }else{
     echo "Something went wrong while uploading your file... sorry.";
