@@ -20,7 +20,7 @@
   <article>
     <?php
     $bucket = "comsm0010-wk13290";
-    $keydir = "test/";
+    $keydir = "";
     $key = "sakura4.jpg";
     $bucketpath='/mnt/s3test/';
 
