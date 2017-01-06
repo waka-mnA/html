@@ -82,7 +82,7 @@
 	$array = scandir($path,1);
 	$num = count($array);
 
-	echo "<table class='table table-striped table-hover my-gallery'>";
+	echo "<table class='table table-responsive table-hover my-gallery'>";
 	$max = 3;
 	$cnt = 0;
 
