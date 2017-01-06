@@ -83,7 +83,7 @@
 	$num = count($array);
 
 	echo "<table border=1><tr>";
-	$max = 1;
+	$max = 3;
 	$cnt = 0;
 
 	for ($i=0;$i<$num;$i++){
