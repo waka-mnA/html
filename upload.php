@@ -13,6 +13,7 @@
   $bucket = "comsm0010-wk13290";
   // Filename to be uploaded
   $key = "test/sakura2.jpg";
+  $bucketpath='/mnt/s3/';
 //echo "TEST0";
 
 // $sdk = new Aws\Sdk([
@@ -29,13 +30,22 @@
 //     'profile' => 'default',
 //     'version' => 'latest',
 // ));
-$s3 = S3Client::factory([
-  "key" => getenv("AWS_ACCESS_KEY_ID"),
-  "secret" => getenv("AWS_SECRET_ACCESS_KEY"),
-  "region" => 'eu-west-2',
-  'version' => 'latest',
-  'profile' => 'default',
- ]);
+
+try{
+  if(is_uploaded_file($_FILES['file']['tmp_name'])){
+    move_uploaded_file($_FILES['file']['tmp_name'], $bucketpath.$key);
+    echo 'Uploaded Successfully!';
+  }
+
+}catch(Exception $e) {
+        echo 'Error::', $e->getMessage().PHP_EOL;
+
+}
+
+
+
+
+
 
 
 //Get file name
@@ -49,33 +59,33 @@ $fileName = $_FILES['upfile']['name'];
 //   die('File is not uploaded');
 // }
 
-try {
-  echo "TEST1";
-  // S3を操作するためのオブジェクトを生成（リージョンは東京）
-
-
-$response = $s3->putObject(array(
-  'Bucket' => $bucket,
-   'Key'    => $key,
-   'Body' => EntityBody::factory(fopen($filepath, 'r')),
-   'ContentType' => $type,
-   'ACL' => 'public-read',));
-
-
-
-
-  // $result = $client->putObject([
-  //     'Bucket'    => $bucket,
-  //     'Key'       => $key,
-  //     'Body'      => file_get_contents($filepath),
-  //     'ACL'       => 'public-read',
-  //     'ContentType' => $type,
-  // ]);
-
-  echo "Uploaded Successfully!";
-} catch (S3Exception $exc) {
-    echo "Upload Failed.";
-    echo $exc->getMessage();
-}
+// try {
+//   echo "TEST1";
+//   // S3を操作するためのオブジェクトを生成（リージョンは東京）
+//
+//
+// $response = $s3->putObject(array(
+//   'Bucket' => $bucket,
+//    'Key'    => $key,
+//    'Body' => EntityBody::factory(fopen($filepath, 'r')),
+//    'ContentType' => $type,
+//    'ACL' => 'public-read',));
+//
+//
+//
+//
+//   // $result = $client->putObject([
+//   //     'Bucket'    => $bucket,
+//   //     'Key'       => $key,
+//   //     'Body'      => file_get_contents($filepath),
+//   //     'ACL'       => 'public-read',
+//   //     'ContentType' => $type,
+//   // ]);
+//
+//   echo "Uploaded Successfully!";
+// } catch (S3Exception $exc) {
+//     echo "Upload Failed.";
+//     echo $exc->getMessage();
+// }
 echo "TEST2";
 ?>
