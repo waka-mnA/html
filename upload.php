@@ -32,7 +32,9 @@
 //     'profile' => 'default',
 //     'version' => 'latest',
 // ));
-$tmpFile = $_FILES['upfile']['tmp_name'],
+$tmpFile = $_FILES['upfile']['tmp_name'];
+$tmpFile = 'sakura1.jpg';
+
 try{
   // if(is_uploaded_file($_FILES['upfile']['tmp_name'])){
     //echo $_FILES['upfile']['tmp_name']."<br />";;
