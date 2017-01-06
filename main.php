@@ -65,14 +65,6 @@
 <article>
 	<h5> You are logged in as <?php print $loginUser; ?></h5>
 
-  <form class="form-horizontal" method="post" enctype="multipart/form-data"  action="upload.php">
-		<div class="form-group">
-			<div class="col-lg-10">
-				<input class="form-control" id="uploadFile" type="file" name="upfile">
-			</div>
-		</div>
-    <input class="btn btn-default" type="submit" value="Upload" />
-  </form>
 
 <h2>Gallery</h2>
 
@@ -110,6 +102,19 @@
 	}
 	echo "</tr></table>";
 	?>
+
+
+	<h3>
+		Upload your favourite photos!
+	</h3>
+	<form class="form-horizontal" method="post" enctype="multipart/form-data"  action="upload.php">
+		<div class="form-group">
+			<div class="col-lg-10">
+				<input class="form-control" id="uploadFile" type="file" name="upfile">
+			</div>
+		</div>
+    <input class="btn btn-default" type="submit" value="Upload" />
+  </form>
 
 </article>
 <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/aside.html'); ?>  -->
