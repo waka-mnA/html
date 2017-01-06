@@ -45,7 +45,7 @@ try {
   echo "TEST1";
 
 
-  $s3->putBucket("comsm0010-wk13290", S3::ACL_PUBLIC_READ);
+  //$s3->putBucket("comsm0010-wk13290", S3Cl::ACL_PUBLIC_READ);
 
 //move the file
 if ($s3->putObjectFile($filepath, $bucket, $fileName, S3::ACL_PUBLIC_READ)) {
