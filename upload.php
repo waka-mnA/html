@@ -120,7 +120,7 @@ echo $key.'   ';
 
 // try {
 //   echo "TEST1";
-//   
+//   // S3を操作するためのオブジェクトを生成（リージョンは東京）
 //
 //
 // $response = $s3->putObject(array(
@@ -148,3 +148,4 @@ echo $key.'   ';
 // }
 echo "TEST2";
 ?>
+
