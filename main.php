@@ -74,6 +74,7 @@
     <input class="btn btn-default" type="submit" value="Upload" />
   </form>
 
+<h2>Gallery</h2>
 
 	<!-- Display photos -->
 	<?php
