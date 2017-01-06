@@ -46,8 +46,8 @@
       echo "Please select a file.";
 
     }
-    echo "<a href="main.php" class="btn btn-default">Back to Main</a>";
     ?>
+    <a href="main.php" class="btn btn-default">Back to Main</a>
   </article>
 
   <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/aside.html'); ?>  -->
