@@ -20,14 +20,14 @@
   <article>
     <?php
     $bucket = "comsm0010-wk13290";
-    $keydir = "test/";
+    $keydir = "";
     $key = "sakura4.jpg";
     $bucketpath='/mnt/s3test/';
 
     $tmpFile = $_FILES['upfile']['tmp_name'];
 
     if (is_uploaded_file($_FILES["upfile"]["tmp_name"])) {
-      system('chmod 777 '.$bucketpath.$keydir);exit;
+      //system('chmod 777 '.$bucketpath.$keydir);exit;
 
       if (move_uploaded_file($tmpFile,  $bucketpath.$keydir.$key)){
         chmod($bucketpath.$keydir.$key, 0644);
