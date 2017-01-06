@@ -75,6 +75,8 @@ height: 200px;
 text-align: center; /*¶‰E’†‰›*/
 vertical-align: middle; /*ã‰º’†‰›*/
 layout-grid-line:166px; /*IE7*/
+margin: auto;
+padding:auto;
 }
 .my-gallery td a img {
 width:auto;
