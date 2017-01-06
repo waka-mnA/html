@@ -33,19 +33,19 @@
 //     'version' => 'latest',
 // ));
 $tmpFile = $_FILES['upfile']['tmp_name'];
-$tmpFile = 'sakura1.jpg';
+//$tmpFile = 'sakura1.jpg';
 
 try{
-  // if(is_uploaded_file($_FILES['upfile']['tmp_name'])){
+   if(is_uploaded_file($_FILES['upfile']['tmp_name'])){
     //echo $_FILES['upfile']['tmp_name']."<br />";;
     echo $bucketpath.$keydir.$key."\r\n";
     $result = move_uploaded_file($tmpFile, $bucketpath.$keydir.$key);
     if ( $result === true ) {
       echo 'Uploaded Successfully!'."<br />";
     } else {
-      echo 'Upload Failed'."<br />";
+      echo 'Upload Failed'."\r\n";
     }
-  // }
+   }
 }catch(Exception $e) {
         echo 'Error::', $e->getMessage().PHP_EOL;
 
