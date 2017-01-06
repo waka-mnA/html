@@ -35,7 +35,7 @@
 
 try{
   if(is_uploaded_file($_FILES['upfile']['tmp_name'])){
-    echo $_FILES['upfile']['tmp_name']."<br />";;
+    //echo $_FILES['upfile']['tmp_name']."<br />";;
     echo $bucketpath.$keydir."<br />";
     $result = move_uploaded_file($_FILES['upfile']['tmp_name'], $bucketpath.$keydir.$key);
     if ( $result === true ) {
