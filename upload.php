@@ -33,17 +33,17 @@
       //system('chmod 777 '.$bucketpath.$keydir);exit;
 
       if (!exif_imagetype($tmpFile)){
-        echo "<h2>Please select a image file</h2>";
+        echo "<h3>Please select a image file</h3>";
       }
       else if (move_uploaded_file($tmpFile,  $bucketpath.$keydir.$key)){
         //chmod($bucketpath.$keydir.$key, 0644);
-        echo "<h2>Success! The photo is saved as".$key."</h2>";
+        echo "<h3>Success! The photo is saved as ".$key."</h3>";
       } else {
-        echo "<h2>Upload Failed.</h2>";
+        echo "<h3>Upload Failed.</h3>";
       }
 
     } else {
-      echo "Please select a file.";
+      echo "<h3>Please select a file.</h3>";
 
     }
     ?>

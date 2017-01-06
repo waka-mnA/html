@@ -63,7 +63,7 @@
 	<?php include ($_SERVER['DOCUMENT_ROOT']. '/header.html'); ?>
 	<!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/nav.html'); ?> -->
 <article>
-	<h4> You are logged in as <?php print $loginUser; ?></h4>
+	<h5> You are logged in as <?php print $loginUser; ?></h5>
 
   <form class="form-horizontal" method="post" enctype="multipart/form-data"  action="upload.php">
 		<div class="form-group">
