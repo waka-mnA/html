@@ -35,17 +35,15 @@
 
 try{
   if(is_uploaded_file($_FILES['upfile']['tmp_name'])){
-    echo $_FILES['upfile']['tmp_name']."<br />";;
-    echo $bucketpath.$keydir."<br />";
+    echo $_FILES['upfile']['tmp_name'];//."<br />";;
+    echo $bucketpath.$keydir;//."<br />";
     $result = @move_uploaded_file($_FILES['upfile']['tmp_name'], $bucketpath.$keydir.$key);
     if ( $result === true ) {
-    　　  echo 'Uploaded Successfully!'."<br />";
+    　　  echo 'Uploaded Successfully!';//."<br />";
     　} else {
     　　  echo 'Upload Failed'."<br />";
     　}
-
   }
-
 }catch(Exception $e) {
         echo 'Error::', $e->getMessage().PHP_EOL;
 
