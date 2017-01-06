@@ -82,7 +82,7 @@
 	$array = scandir($path,1);
 	$num = count($array);
 
-	echo "<table border=1><tr>";
+	echo "<table><tr>";
 	$max = 3;
 	$cnt = 0;
 
