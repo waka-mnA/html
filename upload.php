@@ -6,6 +6,8 @@
   use Aws\S3\Exception\S3Exception;
   use Guzzle\Http\EntityBody;
   use Aws\S3\Enum\CannedAcl;
+  use Aws\Common\Aws;
+
 
   // Bucket name
   $bucket = "comsm0010-wk13290";
@@ -20,14 +22,17 @@
 // ]);
 // $client = $sdk->createS3();
 
-$s3 = S3Client::factory(array(
-    "key" => getenv("AWS_ACCESS_KEY_ID"),
-    "secret" => getenv("AWS_SECRET_ACCESS_KEY"),
-    "region" => 'eu-west-2',
-    'profile' => 'default',
-    'version' => 'latest',
-));
-
+// $s3 = S3Client::factory(array(
+//     "key" => getenv("AWS_ACCESS_KEY_ID"),
+//     "secret" => getenv("AWS_SECRET_ACCESS_KEY"),
+//     "region" => 'eu-west-2',
+//     'profile' => 'default',
+//     'version' => 'latest',
+// ));
+$s3 = Aws::factory(array(
+  "key" => getenv("AWS_ACCESS_KEY_ID"),
+  "secret" => getenv("AWS_SECRET_ACCESS_KEY"),
+   "region" => 'eu-west-2', ))->get('s3');
 
 
 //Get file name
@@ -43,20 +48,17 @@ $fileName = $_FILES['upfile']['name'];
 
 try {
   echo "TEST1";
+  // S3を操作するためのオブジェクトを生成（リージョンは東京）
 
 
-  $result = $s3->putObject(array(
-      'Bucket'       => $bucket,
-      'Key'          => $key,
-      'SourceFile'   => $filepath,
-      'ContentType'  => $type,
-      'ACL'          => 'public-read',
-      'StorageClass' => 'REDUCED_REDUNDANCY',
-      // 'Metadata'     => array(    
-      //     'User' => 'value 1',
-      //     'param2' => 'value 2'
-      // )
-  ));
+$response = $s3->putObject(array(
+  'Bucket' => $bucket,
+   'Key'    => $key,
+   'Body' => EntityBody::factory(fopen($filepath, 'r')),
+   'ContentType' => $type,
+   'ACL' => 'public-read',));
+
+
 
 
   // $result = $client->putObject([
