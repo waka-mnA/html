@@ -20,14 +20,14 @@
 // ]);
 // $client = $sdk->createS3();
 
-// $client = S3Client::factory(array(
-//     "key" => getenv("AWS_ACCESS_KEY_ID"),
-//     "secret" => getenv("AWS_SECRET_ACCESS_KEY"),
-//     "region" => 'eu-west-2',
-//     'profile' => 'default',
-//     'version' => 'latest',
-// ));
-$s3 = new S3Client(getenv("AWS_ACCESS_KEY_ID"), getenv("AWS_SECRET_ACCESS_KEY"));
+$s3 = S3Client::factory(array(
+    "key" => getenv("AWS_ACCESS_KEY_ID"),
+    "secret" => getenv("AWS_SECRET_ACCESS_KEY"),
+    "region" => 'eu-west-2',
+    'profile' => 'default',
+    'version' => 'latest',
+));
+
 
 
 //Get file name
