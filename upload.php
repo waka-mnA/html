@@ -36,7 +36,7 @@ $filepath="sakura1.jpg";
 // if (!is_uploaded_file($filepath)) {
 //   die('File is not uploaded');
 // }
-echo getenv('HOME');
+echo getenv('AWS_SECRET_ACCESS_KEY');
 try {
   echo "TEST1";
   $result = $client->putObject([
