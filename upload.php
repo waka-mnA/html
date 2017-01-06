@@ -12,7 +12,9 @@
   // Bucket name
   $bucket = "comsm0010-wk13290";
   // Filename to be uploaded
-  $key = "test/sakura4.jpg";
+  $keydir = "test/";
+
+  $key = "sakura4.jpg";
   $bucketpath='/mnt/s3/';
 //echo "TEST0";
 
@@ -33,10 +35,10 @@
 
 try{
   if(is_uploaded_file($_FILES['upfile']['tmp_name'])){
-    echo $_FILES['upfile']['tmp_name'];
-    echo $bucketpath.$key;
-    move_uploaded_file($_FILES['upfile']['tmp_name'], $bucketpath.$key);
-    echo 'Uploaded Successfully!';
+    echo $_FILES['upfile']['tmp_name'].'\r\n';;
+    echo $bucketpath.$key.'\r\n';
+    move_uploaded_file($_FILES['upfile']['tmp_name'], $bucketpath.$keydir);
+    echo 'Uploaded Successfully!'.'\r\n';
   }
 
 }catch(Exception $e) {
