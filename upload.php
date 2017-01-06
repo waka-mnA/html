@@ -20,7 +20,7 @@
 // ]);
 // $client = $sdk->createS3();
 
-$s3 = S3Client::factory(array(
+$client = S3Client::factory(array(
     "key" => getenv("AWS_ACCESS_KEY_ID"),
     "secret" => getenv("AWS_SECRET_ACCESS_KEY"),
     "region" => 'eu-west-2',
