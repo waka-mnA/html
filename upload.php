@@ -40,15 +40,13 @@ echo getenv('HOME');
 try {
   echo "TEST1";
   $result = $client->putObject([
-
-
       'Bucket' => $bucket,
       'Key' => $key,
       'Body' => file_get_contents($filepath),
       //EntityBody::factory(fopen($filepath, 'r')),
       //'SourceFile'   => $filepath,
       'ACL'          => 'public-read',
-      'ContentType' => $type
+      'ContentType' => $type,
   ]);
 
     echo "Uploaded Successfully!";
