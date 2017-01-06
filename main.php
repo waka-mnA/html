@@ -75,6 +75,41 @@
   </form>
 
 
+	<!-- Display photos -->
+	<?php
+	$path = '/mnt/s3test/';
+	$array = scandir($path,1);
+	$num = count($array);
+
+	echo "<table border=1><tr>";
+	$max = 1;
+	$cnt = 0;
+
+	for ($i=0;$i<$num;$i++){
+		$filename = '/mnt/s3test/'.$array[$i];
+		//"http://52.56.67.132/images/" . $array[$i];
+		//If extension = gif/jpg/png
+		//Display as original size
+
+		if  (Eregi('gif$', $filename) OR
+			 Eregi('jpg$', $filename) OR
+			 Eregi('jpeg$',$filename) OR
+			 Eregi('png$', $filename))
+		{
+			echo"<td width=\"200\">".$filename . "</td>";
+			echo "<td><a href=" .$filename . "><img src = " .$filename. "></a></td>";
+
+			$cnt = $cnt + 1;
+
+			if ($cnt >= $max) {
+				echo "</tr><tr>";
+				$cnt = 0;
+			}
+		}
+	}
+	echo "</tr></table>";
+	?>
+
 </article>
 <!-- <?php include ($_SERVER['DOCUMENT_ROOT']. '/aside.html'); ?>  -->
 <?php include ($_SERVER['DOCUMENT_ROOT']. '/footer.html');?>
