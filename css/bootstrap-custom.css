@@ -68,3 +68,20 @@ label{
 font-size:1.8em;
 
 }
+
+
+td {
+display: table-cell; /*ã‰º’†‰›*/
+width: 120px;
+height: 150px;
+text-align: center; /*¶‰E’†‰›*/
+vertical-align: middle; /*ã‰º’†‰›*/
+layout-grid-line:166px; /*IE7*/
+}
+td a {
+width:auto;
+height:auto;
+max-width:120px;
+max-height:150px;
+vertical-align: middle;/*IE7*/
+}
