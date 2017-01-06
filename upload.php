@@ -32,10 +32,10 @@
     if (is_uploaded_file($_FILES["upfile"]["tmp_name"])) {
       //system('chmod 777 '.$bucketpath.$keydir);exit;
 
-      if (!exif_imagetype(tmpFile)){}
+      if (!exif_imagetype(tmpFile)){
         echo "<h2>Please select a image file</h2>";
-
-      if (move_uploaded_file($tmpFile,  $bucketpath.$keydir.$key)){
+      }
+      else if (move_uploaded_file($tmpFile,  $bucketpath.$keydir.$key)){
         //chmod($bucketpath.$keydir.$key, 0644);
         echo "<h2>Success!</h2>";
       } else {
