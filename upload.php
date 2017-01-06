@@ -45,14 +45,19 @@ try {
   echo "TEST1";
 
 
-  //$s3->putBucket("comsm0010-wk13290", S3Cl::ACL_PUBLIC_READ);
+  $result = $s3->putObject(array(
+      'Bucket'       => $bucket,
+      'Key'          => $key,
+      'SourceFile'   => $filepath,
+      'ContentType'  => $type,
+      'ACL'          => 'public-read',
+      'StorageClass' => 'REDUCED_REDUNDANCY',
+      // 'Metadata'     => array(    
+      //     'User' => 'value 1',
+      //     'param2' => 'value 2'
+      // )
+  ));
 
-//move the file
-if ($s3->putObjectFile($filepath, $bucket, $fileName, 'public-read')) {
-    echo "We successfully uploaded your file.";
-}else{
-    echo "Something went wrong while uploading your file... sorry.";
-}
 
   // $result = $client->putObject([
   //     'Bucket'    => $bucket,
