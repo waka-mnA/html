@@ -21,7 +21,7 @@
     <?php
 
     $bucket = "comsm0010-wk13290";
-    $keydir = "test";
+    $keydir = "test/";
     //Get the original name of the file
     $key = $_FILES["upfile"]["name"];
     //Directory mounted with AWS S3
