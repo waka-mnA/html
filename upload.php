@@ -1,5 +1,5 @@
 <?php
-  require_once 'aws.phar';
+  require_once ($_SERVER['DOCUMENT_ROOT']. '/aws.phar');
   //require("phar://".dirname(__FILE__)."aws.phar/aws-autoloader.php");
   use Aws\S3\S3Client;
   use Aws\Common\Enum\Region;
@@ -15,12 +15,18 @@
  echo getenv("AWS_ACCESS_KEY_ID").'\rTEST';
 // echo getenv("AWS_SECRET_ACCESS_KEY".'\n');
 
-$sdk = new Aws\Sdk([
-  'profile' => 'default',
-  'version' => 'latest',
-  'region'  => 'eu-west-2'
-]);
-$client = $sdk->createS3();
+// $sdk = new Aws\Sdk([
+//   'profile' => 'default',
+//   'version' => 'latest',
+//   'region'  => 'eu-west-2'
+// ]);
+// $client = $sdk->createS3();
+
+$s3 = S3Client::factory(array(
+    "key" => getenv("AWS_ACCESS_KEY_ID"),
+    "secret" => getenv("AWS_SECRET_ACCESS_KEY"),
+    "region" => 'eu-west-2',
+));
 
 //Get file name
 $filepath = $_FILES["upfile"]["tmp_name"];
