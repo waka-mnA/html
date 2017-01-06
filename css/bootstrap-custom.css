@@ -76,10 +76,10 @@ img.gallery{
   max-height:200px;
 }
 
-td.image {
+table td {
 display: table-cell; /*ã‰º’†‰›*/
-width: 120px;
-height: 150px;
+width: 300px;
+height: 200px;
 text-align: center; /*¶‰E’†‰›*/
 vertical-align: middle; /*ã‰º’†‰›*/
 layout-grid-line:166px; /*IE7*/

@@ -82,7 +82,7 @@
 	$array = scandir($path,1);
 	$num = count($array);
 
-	echo "<table><tr>";
+	echo "<table class='table table-striped table-hover '>";
 	$max = 3;
 	$cnt = 0;
 
@@ -97,7 +97,7 @@
 			 Eregi('png$', $filename))
 		{
 			//echo"<td width=\"200\">".$filename . "</td>";
-			echo "<td class='image'><a href=" .$filename . "><img class='img-responsive gallery' src = " .$filename. "></a>".$array[$i] . "</td>";
+			echo "<td><a href=" .$filename . "><img class='img-responsive gallery' src = " .$filename. "></a>".$array[$i] . "</td>";
 
 
 			$cnt = $cnt + 1;
