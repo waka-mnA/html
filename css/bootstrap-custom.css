@@ -69,6 +69,10 @@ font-size:1.8em;
 
 }
 
+img{
+  max-width:300px;
+  height:auto;
+}
 
 td.image {
 display: table-cell; /*ã‰º’†‰›*/
