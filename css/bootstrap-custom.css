@@ -69,7 +69,7 @@ font-size:1.8em;
 
 }
 
-img{
+img.gallery{ 
   max-width:300px;
   height:auto;
 }
