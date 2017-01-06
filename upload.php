@@ -21,11 +21,11 @@
     <?php
     $bucket = "comsm0010-wk13290";
     $keydir = "";
-    $key = "sakura4.jpg";
+    $key = $_FILES["upfile"]["name"];
     $bucketpath='/mnt/s3test/';
 
     $tmpFile = $_FILES['upfile']['tmp_name'];
-
+echo $key.'   ';
     if (is_uploaded_file($_FILES["upfile"]["tmp_name"])) {
       //system('chmod 777 '.$bucketpath.$keydir);exit;
 
