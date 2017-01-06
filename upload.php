@@ -19,9 +19,9 @@
 
   <article>
     <?php
-    
+
     $bucket = "comsm0010-wk13290";
-    $keydir = "";
+    $keydir = "test";
     //Get the original name of the file
     $key = $_FILES["upfile"]["name"];
     //Directory mounted with AWS S3
@@ -33,7 +33,7 @@
       //system('chmod 777 '.$bucketpath.$keydir);exit;
 
       if (move_uploaded_file($tmpFile,  $bucketpath.$keydir.$key)){
-        chmod($bucketpath.$keydir.$key, 0644);
+        //chmod($bucketpath.$keydir.$key, 0644);
         echo "<h2>Success!</h2>";
       } else {
         echo "<h2>Upload Failed.</h2>";
